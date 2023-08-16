@@ -2,7 +2,11 @@
 
 This repository contains a Python script for evaluating mathematical expressions using Reverse Polish Notation (RPN). RPN is a mathematical notation in which every operator follows all of its operands.
 
-[![Reference](https://img.youtube.com/vi/7ha78yWRDlE/0.jpg)](https://www.youtube.com/watch?v=7ha78yWRDlE)
+[![Reverse Polish Notation and The Stack - Computerphile](https://img.shields.io/badge/YouTube-Red?style=flat&logo=youtube)](https://www.youtube.com/watch?v=7ha78yWRDlE)
+
+
+
+
 
 ## Table of Contents
 
