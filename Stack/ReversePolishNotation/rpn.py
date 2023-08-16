@@ -1,24 +1,20 @@
-op = {'+': lambda x, y: x + y,
-      '-': lambda x, y: x - y,
-      '*': lambda x, y: x * y,
-      '/': lambda x, y: x / y }
 
-def calculate_rpn(expression):
-    stack = []
-    expression = expression.split()         #O(n)
-    for o in expression:                  #O(n)
-        if o.isdigit():
-            stack.append(float(o))          #O(1)
-        elif o in op:
-            a = stack.pop()                 #O(1)
-            b = stack.pop()                 #O(1)
-            stack.append(op[o](a, b))       #O(1)
-        else:
-            raise ValueError("Invalid value: " + o)
+def evalRPN(self, tokens: List[str]) -> int:
+      stack = []
+      for c in tokens:
+      if c == "+":
+          stack.append(stack.pop() + stack.pop())
+      elif c == "-":
+          a, b = stack.pop(), stack.pop()
+          stack.append(b - a)
+      elif c == "*":
+          stack.append(stack.pop() * stack.pop())
+      elif c == "/":
+          a, b = stack.pop(), stack.pop()
+          stack.append(int(b / a))
+      else:
+          stack.append(int(c))
+      return stack[0]
 
-    return stack.pop()                      #O(1)
+print(evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
 
-expression = "4 5 + 3 *"
-result = calculate_rpn(expression)
-
-print("Result:", result)
