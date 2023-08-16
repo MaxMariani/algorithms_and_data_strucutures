@@ -24,7 +24,7 @@ This repository contains a Python script for evaluating mathematical expressions
 2. Copy and paste the provided Python script into a `.py` file (e.g., `rpn_calculator.py`).
 3. Open a terminal or command prompt.
 4. Navigate to the directory where the `.py` file is located.
-5. Run the script using the command: `python rpn_calculator.py`
+5. Run the script
 
 ## Script Overview
 
